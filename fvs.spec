@@ -1,15 +1,16 @@
 Summary:	Fingerprint Verification System
 Summary(pl):	Fingerprint Verifycation System - system weryfikacji odcisków palców
 Name:		fvs
-Version:	0.1.0
+Version:	0.1.1
 Release:	1
 Epoch:		1
 License:	MPL 1.1
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/fvs/%{name}-%{version}.tar.bz2
-# Source0-md5:	dba7993ac4d3a21c70ce058e34dac7b3
+# Source0-md5:	f369e2f47f900712230576b56e7aaef1
 URL:		http://fvs.sourceforge.net/
 BuildRequires:	ImageMagick-devel
+BuildRequires:	automake
 Obsoletes:	fvs-gfvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,7 +29,7 @@ obrazów i analizy danych.
 Summary:	Header files for FVS library
 Summary(pl):	Pliki nag³ówkowe biblioteki FVS
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files for FVS library.
@@ -40,7 +41,7 @@ Pliki nag³ówkowe biblioteki FVS.
 Summary:	Static FVS library
 Summary(pl):	Statyczna biblioteka FVS
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static FVS library.
@@ -51,7 +52,11 @@ Statyczna biblioteka FVS.
 %prep
 %setup -q
 
+# hack for broken sources
+touch fvs
+
 %build
+cp -f /usr/share/automake/config.* .
 %configure
 %{__make}
 
@@ -78,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/{html,images}
+%doc doc/{*.css,*.html,images}
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/fvs
