@@ -32,7 +32,7 @@ obrazów i analizy danych.
 Summary:	Header files for FVS library
 Summary(pl):	Pliki nag³ówkowe biblioteki FVS
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
 Header files for FVS library.
@@ -44,7 +44,7 @@ Pliki nag³ówkowe biblioteki FVS.
 Summary:	Static FVS library
 Summary(pl):	Statyczna biblioteka FVS
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 Static FVS library.
@@ -56,7 +56,7 @@ Statyczna biblioteka FVS.
 Summary:	GUI for FVS
 Summary(pl):	Graficzny interfejs do FVS
 Group:		X11/Applications
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description gfvs
 GUI for FVS.
