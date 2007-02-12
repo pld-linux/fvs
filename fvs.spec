@@ -1,5 +1,5 @@
 Summary:	Fingerprint Verification System
-Summary(pl):	Fingerprint Verifycation System - system weryfikacji odcisków palców
+Summary(pl.UTF-8):   Fingerprint Verifycation System - system weryfikacji odciskÃ³w palcÃ³w
 Name:		fvs
 Version:	0.1.1
 Release:	1
@@ -19,34 +19,34 @@ This library provides a framework to use when creating a fingerprint
 recognition program. It provides easy to use interfaces to load
 fingerprint files, process fingerprint images and analyse the data.
 
-%description -l pl
-Ta biblioteka udostêpnia szkielet, który mo¿na wykorzystaæ przy
-tworzeniu programów rozpoznaj±cych odciski palców. Dostarcza ³atwy w
-u¿yciu interfejs do wczytywania plików z odciskami, przetwarzania tych
-obrazów i analizy danych.
+%description -l pl.UTF-8
+Ta biblioteka udostÄ™pnia szkielet, ktÃ³ry moÅ¼na wykorzystaÄ‡ przy
+tworzeniu programÃ³w rozpoznajÄ…cych odciski palcÃ³w. Dostarcza Å‚atwy w
+uÅ¼yciu interfejs do wczytywania plikÃ³w z odciskami, przetwarzania tych
+obrazÃ³w i analizy danych.
 
 %package devel
 Summary:	Header files for FVS library
-Summary(pl):	Pliki nag³ówkowe biblioteki FVS
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki FVS
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files for FVS library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki FVS.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki FVS.
 
 %package static
 Summary:	Static FVS library
-Summary(pl):	Statyczna biblioteka FVS
+Summary(pl.UTF-8):   Statyczna biblioteka FVS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static FVS library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka FVS.
 
 %prep
