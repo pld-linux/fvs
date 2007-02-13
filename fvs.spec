@@ -1,5 +1,5 @@
 Summary:	Fingerprint Verification System
-Summary(pl.UTF-8):   Fingerprint Verifycation System - system weryfikacji odcisków palców
+Summary(pl.UTF-8):	Fingerprint Verifycation System - system weryfikacji odcisków palców
 Name:		fvs
 Version:	0.1.1
 Release:	1
@@ -27,7 +27,7 @@ obrazów i analizy danych.
 
 %package devel
 Summary:	Header files for FVS library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki FVS
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki FVS
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -39,7 +39,7 @@ Pliki nagłówkowe biblioteki FVS.
 
 %package static
 Summary:	Static FVS library
-Summary(pl.UTF-8):   Statyczna biblioteka FVS
+Summary(pl.UTF-8):	Statyczna biblioteka FVS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
